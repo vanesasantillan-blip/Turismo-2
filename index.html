@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TravelAI, tu asistente inteligente para descubrir destinos y planificar viajes.">
+  <title>TravelAI | Tu asistente de viajes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio"><span class="brand-icon">✈</span> Travel<span>AI</span></a>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#destinos">Destinos</a>
+      <a href="#asistente">Asistente IA</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">☾</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+        <span class="eyebrow">✦ VIAJÁ, DESCUBRÍ, DISFRUTÁ</span>
+        <h1>El mundo te espera.<br><span>Empezá a explorarlo.</span></h1>
+        <p>Encontrá tu próximo destino con ayuda de TravelAI, tu asistente inteligente de turismo.</p>
+        <a class="primary-btn" href="#asistente">Planificar mi viaje <span>→</span></a>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-label"><span>🌎</span><div><strong>Tu próxima aventura</strong><small>Comienza acá</small></div></div>
+      </div>
+    </section>
+
+    <section class="destinations section" id="destinos">
+      <div class="section-heading">
+        <div><span class="eyebrow">INSPIRACIÓN PARA VIAJAR</span><h2>Destinos para descubrir</h2></div>
+        <p>Algunos lugares que podrían convertirse en tu próxima aventura.</p>
+      </div>
+      <div class="destination-grid">
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=900&q=85" alt="Montañas y lago en Bariloche">
+          <div class="card-info"><span>ARGENTINA</span><h3>Bariloche</h3><p>Lagos, montañas y paisajes increíbles.</p></div>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=900&q=85" alt="Cataratas y naturaleza">
+          <div class="card-info"><span>ARGENTINA</span><h3>Puerto Iguazú</h3><p>Naturaleza y las famosas Cataratas.</p></div>
+        </article>
+        <article class="destination-card">
+          <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=85" alt="Montañas nevadas">
+          <div class="card-info"><span>ARGENTINA</span><h3>El Chaltén</h3><p>Montañas y senderos para explorar.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="assistant-section section" id="asistente">
+      <div class="assistant-intro">
+        <span class="eyebrow">TU GUÍA VIRTUAL</span>
+        <h2>¿A dónde<br>querés viajar?</h2>
+        <p>Preguntale a TravelAI sobre destinos, actividades, comidas típicas, recorridos y consejos para organizar tu viaje.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-question="¿Qué puedo hacer durante 3 días en Bariloche?">🏔️ Actividades en Bariloche</button>
+          <button class="suggestion" data-question="Recomendame destinos económicos para conocer en Argentina.">💰 Destinos económicos</button>
+          <button class="suggestion" data-question="¿Qué lugares turísticos puedo visitar en Salta?">📍 Lugares para visitar en Salta</button>
+        </div>
+      </div>
+
+      <div class="chat-card">
+        <div class="chat-header">
+          <div class="bot-avatar">✈</div>
+          <div><strong>TravelAI</strong><small><span class="online-dot"></span> Asistente de turismo</small></div>
+          <button class="clear-btn" id="clearHistory" title="Borrar historial">↻</button>
+        </div>
+        <div class="chat-messages" id="chatMessages" aria-live="polite">
+          <div class="message assistant-message">
+            <div class="message-avatar">✈</div>
+            <div class="bubble">¡Hola! Soy TravelAI 🌎 Estoy acá para ayudarte a descubrir lugares y planificar tu próximo viaje. ¿Qué destino te gustaría conocer?</div>
+          </div>
+        </div>
+        <div class="chat-footer">
+          <form id="chatForm">
+            <label class="sr-only" for="userInput">Escribí tu consulta</label>
+            <input id="userInput" type="text" maxlength="500" placeholder="Escribí tu pregunta..." autocomplete="off" required>
+            <button id="sendButton" type="submit" aria-label="Enviar consulta">➤</button>
+          </form>
+          <small>TravelAI puede cometer errores. Verificá horarios, precios y datos antes de viajar.</small>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#inicio"><span class="brand-icon">✈</span> Travel<span>AI</span></a><p>Explorá el mundo, una pregunta a la vez.</p><small>Proyecto educativo · 2026</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>
